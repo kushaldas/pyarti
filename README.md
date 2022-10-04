@@ -2,6 +2,8 @@
 
 It is a Python module to allow creating of SOCKS5 proxy using [Arti](https://gitlab.torproject.org/tpo/core/arti/) project from the [Tor Project](https://www.torproject.org).
 
+By default it runs the proxy at port 9150 on localhost.
+
 ## How to build?
 
 First install [Rustup toolchain](https://rustup.rs) for your user.
@@ -32,3 +34,13 @@ For a release build use the following command.
 ```
 python setup.py bdist_wheel
 `````
+
+
+## How to use?
+
+```
+proxy = OnionProxy()
+assert proxy.verify(blocking=True)
+```
+
+Documentation coming soon.
