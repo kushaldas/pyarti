@@ -1,3 +1,4 @@
+import sys
 import time
 import subprocess
 from typing import Optional
@@ -10,7 +11,7 @@ class OnionProxy:
     def __init__(
         self,
     ):
-        args = ["python", "-m", "pyarti"]
+        args = [sys.executable, "-m", "pyarti"]
         self.child: subprocess.Popen = subprocess.Popen(args, stdout=subprocess.PIPE)
 
     def pid(self) -> int:
