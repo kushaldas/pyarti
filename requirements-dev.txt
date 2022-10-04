@@ -1,0 +1,8 @@
+pytest
+setuptools
+wheel
+setuptools-rust
+mypy
+httpx
+httpx-socks
+black
