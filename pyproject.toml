@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools", "wheel", "setuptools-rust"]
+
+[project]
+name = "pyarti"
+version = "0.0.1"
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Rust",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Topic :: Software Development :: Libraries",
+  "Topic :: Software Development :: Libraries :: Python Modules"
+]
+authors = [{name="Kushal Das", email="mail@kushaldas.in"}]
+readme = "README.md"
+requires-python = ">=3.8"
+
+[project.urls]
+"Homepage" = "https://github.com/kushaldas/pyarti"
+"Bug Tracker" = "https://github.com/kushaldas/pyarti/issues"
