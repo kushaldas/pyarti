@@ -16,7 +16,9 @@ sudo dnf install python3-devel openssl-devel
 
 ```
 sudo apt install -y python3-dev python3-pip python3-venv
+```
 
+Then create a virtual environment and follow along.
 
 ```
 python3 -m venv .venv
