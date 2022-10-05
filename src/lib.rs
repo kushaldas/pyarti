@@ -2,8 +2,8 @@ use arti;
 use pyo3::prelude::*;
 
 #[pyfunction]
-fn start_proxy() -> PyResult<bool> {
-    let args = vec!["pyarti", "proxy"];
+fn start_proxy(port: String) -> PyResult<bool> {
+    let args = vec!["pyarti", "proxy", "-p", &port];
     arti::main_main(args).unwrap();
     Ok(true)
 }

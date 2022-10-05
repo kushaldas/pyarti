@@ -2,9 +2,10 @@ API
 ===
 
 
-.. class:: OnionProxy() -> None:
+.. class:: OnionProxy(port: int) -> None:
 
-        Returns an OnionProxy which opens up a SOCKS5 proxy on port 9150. It sends termination signal to the child process when the object is garbage collected.
+        Returns an OnionProxy which opens up a SOCKS5 proxy on port `9150`. It sends termination signal to the child process when the object is garbage collected.
+        You can start listening to a different port by passing the `port` parameter.
 
     .. method:: pid() -> int:
 
@@ -22,6 +23,7 @@ API
 
         Verifies that the proxy is working. If we pass `blocking=True`, then for the next 30 seconds it will
         try to access the given URL and sleeps for 1 second in case it can not.
+        You can pass a different `url` value to verify against.
 
 
 Example usage
@@ -55,3 +57,11 @@ Or, you can manually call the verify method too, here we are sleeping for 5 seco
         time.sleep(5)
     ...
 
+
+
+To listen on port 8080, you can do the following.
+
+::
+
+    p = OnionProxy(8080)
+    assert p.verify(blocking=True)

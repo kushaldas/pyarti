@@ -6,3 +6,4 @@ mypy
 httpx
 httpx-socks
 black
+pexpect

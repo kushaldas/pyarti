@@ -11,3 +11,13 @@ def test_proxy():
     with httpx.Client(transport=transport) as client:
         res = client.get("https://github.com")
         assert res.status_code == 200
+
+
+def test_different_port():
+    "Tests a different port than default"
+    proxy = OnionProxy(9000)
+    assert proxy.verify(blocking=True)
+    transport = SyncProxyTransport.from_url("socks5://127.0.0.1:9000")
+    with httpx.Client(transport=transport) as client:
+        res = client.get("https://www.torproject.org")
+        assert res.status_code == 200
