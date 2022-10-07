@@ -11,6 +11,7 @@ def test_proxy():
     with httpx.Client(transport=transport) as client:
         res = client.get("https://github.com")
         assert res.status_code == 200
+    assert proxy.is_alive()
 
 
 def test_different_port():

@@ -17,6 +17,10 @@ class OnionProxy:
         self.child.expect("provide port number:")
         self.child.sendline(str(port))
 
+    def is_alive(self) -> bool:
+        """Checks if the proxy is running or not."""
+        return self.child.isalive()
+
     def pid(self) -> int:
         """Returns the PID of the running proxy process."""
         return self.child.pid

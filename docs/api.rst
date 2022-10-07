@@ -7,6 +7,10 @@ API
         Returns an OnionProxy which opens up a SOCKS5 proxy on port `9150`. It sends termination signal to the child process when the object is garbage collected.
         You can start listening to a different port by passing the `port` parameter.
 
+    .. method:: is_alive() -> bool:
+
+        Returns a boolean telling if the proxy is running or not.
+
     .. method:: pid() -> int:
 
         Returns the PID of the child process running the actual proxy.
