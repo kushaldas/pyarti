@@ -1,3 +1,4 @@
+import time
 from pyarti import OnionProxy
 
 import httpx
@@ -12,6 +13,10 @@ def test_proxy():
         res = client.get("https://github.com")
         assert res.status_code == 200
     assert proxy.is_alive()
+    # Now let us kill it
+    proxy.kill()
+    time.sleep(1)
+    assert not proxy.is_alive()
 
 
 def test_different_port():

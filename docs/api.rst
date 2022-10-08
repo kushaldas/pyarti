@@ -27,7 +27,7 @@ API
 
         Verifies that the proxy is working. If we pass `blocking=True`, then for the next 30 seconds it will
         try to access the given URL and sleeps for 1 second in case it can not.
-        You can pass a different `url` value to verify against.
+        You can pass a different `url` value to verify against. The object will keep trying to connect to that given URL value.
 
 
 Example usage
